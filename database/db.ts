@@ -12,7 +12,6 @@ const mongooConnection = {
 };
 
 export const connect = async () => {
-  console.log(mongooConnection);
   if (mongooConnection.isConnected) {
     console.log("Ya estabamos conectados");
     return;
