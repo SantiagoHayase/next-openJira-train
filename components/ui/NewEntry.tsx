@@ -13,7 +13,7 @@ export const NewEntry = () => {
 
   const [touched, setTouched] = useState(false);
 
-  const onTextFieldChanges = (event: ChangeEvent<HTMLInputElement>) => {
+  const onTextFieldChanged = (event: ChangeEvent<HTMLInputElement>) => {
     setInputValue(event.target.value);
   };
 
@@ -43,7 +43,7 @@ export const NewEntry = () => {
             helperText={inputValue.length <= 0 && touched && "Ingrese un valor"}
             error={inputValue.length <= 0 && touched}
             value={inputValue}
-            onChange={onTextFieldChanges}
+            onChange={onTextFieldChanged}
             onBlur={() => setTouched(true)}
           />
 
